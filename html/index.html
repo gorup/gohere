@@ -59,6 +59,7 @@
         margin:auto;
         width: 1024px;
         border: 0px solid black;
+        height: 5000px;
       }
       .spot {
         width: 1024px;
@@ -92,21 +93,21 @@
   </head>
 <body>
    <div class="together centered" id=maintitle>
-      <p><a href="asdf">cities</a></p>
+      <!-- <p><a href="cities">cities</a></p> -->
       <h1 id=gohere>go here</h1>
-      <p><a href="asdf">guides</a></p>
+      <p><a href="cities">guides</a></p>
    </div>
    <div id=nontitle>
       <div class="together left" id="cityandsectionguide">
          <h1 class="cityname">Seattle</h1>
          <div class="together left sectionguide">
-            <p><a href="asdf">spots</a></p>
+            <p><a href="#spots">spots</a></p>
             <p>|</p>
-            <p><a href>guide</a></p>
+            <p><a href="#guide">guide</a></p>
             <p>|</p>
-            <p><a href>eating</a></p>
+            <p><a href="#eating">eating</a></p>
             <p>|</p>
-            <p><a href>things to do</a></p>
+            <p><a href="#thingstodo">things to do</a></p>
          </div>
       </div>
       <br>
@@ -116,9 +117,11 @@
       <p>
          Vestibulum ligula lectus penatibus commodo dictum tempus molestie integer tincidunt, montes porta aptent libero pharetra vehicula ac faucibus suscipit dapibus, elit nam consequat auctor convallis donec at sociosqu. Ullamcorper auctor turpis tristique curabitur hendrerit etiam, morbi in erat cras ridiculus gravida, elementum consectetur ex sagittis quis. Nec ad orci ante fringilla justo senectus vel venenatis odio, tristique quam leo donec ligula placerat molestie felis tellus sagittis, hendrerit in aliquam iaculis cursus dolor nisl elit. Justo placerat pellentesque mi suscipit nulla cras rutrum luctus leo magna, dolor arcu natoque faucibus orci suspendisse dis fames risus metus sapien, nisi nunc massa integer duis cubilia tellus volutpat dictumst. Inceptos lobortis pulvinar ligula fermentum nullam curabitur pellentesque, cubilia risus morbi montes ultrices neque, non adipiscing penatibus at rutrum elit. Ad massa luctus dolor lorem sodales tristique condimentum, elit senectus etiam ultricies feugiat fermentum placerat pellentesque, volutpat vivamus platea himenaeos ullamcorper fringilla. Etiam interdum ullamcorper fringilla dignissim pretium lorem elit metus cursus, nullam molestie at rhoncus tortor ligula ultricies sed, fames habitant ornare convallis tempor malesuada pulvinar mus.
       </p>
+      <a id=spots>
       <h1 class="spotstitle">
          spots
       </h1>
+      </a>
       <div class="spot">
          <h2 class=spottypetitle>
             going out
@@ -137,15 +140,21 @@
             </div>
          </div>
       </div>
+      <a id=guide>
       <h1 class="guidetitle">
          guide
       </h1>
+      </a>
+      <a id=eating>
       <h1 class="eatingtitle">
          eating
       </h1>
+      </a>
+      <a id=thingstodo>
       <h1 class="thingstodotitle">
          things to do
       </h1>
+      </a>
    </div>
 </body>
 </html>
