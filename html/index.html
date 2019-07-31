@@ -1,39 +1,151 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            h1 {
-                /* color: black; */
-                /* background-color: rgb(56, 205, 255); */
-                text-align: center;
-                font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-                max-width: 512px;
-                margin: auto;
-                border-radius: 5px;
-                border: 1.6px solid black;
-                /* box-shadow: 0px 0px 5px 5px lightgray; */
-
-            }
-            p {
-                font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-                font-size: 12pt;
-                max-width: 512px;
-                /* margin: auto; */
-                margin-left: 12pt;
-                margin-right: 12pt;
-                text-indent: 24pt;
-            }
-        </style>
-    </head>
+  <head>
+    <style>
+      h1 {
+        /* text-align: center; */
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        /* max-width: 512px; */
+        margin: auto;
+      }
+      .together {
+        /* max-width: 500px; */
+        border: 0px dotted black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .togethertop {
+        /* max-width: 500px; */
+        border: 0px dotted black;
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start;
+      }
+      .centered {
+        margin: auto;
+      }
+      .left {
+        float: left;
+      }
+      .sectionguide {
+        margin-left: 50px;
+        width: 300px;
+      }
+      #maintitle {
+        margin-bottom: 50px;
+        margin-top: 20px;
+        width: 400px;
+      }
+      .cityname {
+        font-size: 40pt;
+      }
+      #gohere {
+        font-size:50pt;
+      }
+      br {
+        clear: both
+      }
+      h2 {
+        margin: 4px 0px
+      }
+      h3 {
+        margin: 4px 0px
+      }
+      #cityandsectionguide {
+        margin-bottom: 20px;
+      }
+      #nontitle {
+        margin:auto;
+        width: 1024px;
+        border: 0px solid black;
+      }
+      .spot {
+        width: 1024px;
+        border: 0px solid #008000;
+        margin-right: 40px;
+        margin-bottom: 20px;
+        clear: both;
+        margin-left:10px;
+      }
+      .spottext {
+        border: 0px double red;
+        width: 480px;
+        margin-right: 64px;
+        /* float:left; */
+      }
+      .spotmap {
+        border: 0px double blue;
+        width: 480px;
+        /* float: left; */
+      }
+      .singlespot {
+        margin-left: 10px;
+      }
+      h1 {
+        clear: both;
+      }
+      .spottypetitle {
+        clear: both;
+      }
+    </style>
+  </head>
 <body>
-<br>
-<h1>gohere</h1>
-<br>
-<p>
-asfsadf
-</p>
-<p>
-    adaf
-</p>
+   <div class="together centered" id=maintitle>
+      <p><a href="asdf">cities</a></p>
+      <h1 id=gohere>go here</h1>
+      <p><a href="asdf">guides</a></p>
+   </div>
+   <div id=nontitle>
+      <div class="together left" id="cityandsectionguide">
+         <h1 class="cityname">Seattle</h1>
+         <div class="together left sectionguide">
+            <p><a href="asdf">spots</a></p>
+            <p>|</p>
+            <p><a href>guide</a></p>
+            <p>|</p>
+            <p><a href>eating</a></p>
+            <p>|</p>
+            <p><a href>things to do</a></p>
+         </div>
+      </div>
+      <br>
+      <p>
+         Lorem ipsum dolor sit amet consectetur adipiscing elit ullamcorper, libero vel arcu ad cras purus risus, mollis nisi fringilla vivamus mus mauris praesent. Enim quis eget blandit eros aptent fermentum ad, turpis libero diam magnis fames auctor curae, dictum sociosqu cras mus etiam et. Nostra potenti parturient magna tortor morbi tincidunt dolor blandit posuere senectus ullamcorper dui aenean ante cras, taciti gravida tempus augue accumsan malesuada ipsum mauris est sit montes convallis bibendum. Litora sociosqu porta maximus etiam dis nec turpis mus imperdiet, nisl convallis accumsan bibendum eleifend egestas lobortis lacus, pretium aliquet leo ultrices mollis tellus et odio. Nulla sapien duis ridiculus libero nisi accumsan bibendum, quis ultricies torquent dolor consectetur varius eleifend augue, tortor neque nullam faucibus lobortis tempor.
+      </p>
+      <p>
+         Vestibulum ligula lectus penatibus commodo dictum tempus molestie integer tincidunt, montes porta aptent libero pharetra vehicula ac faucibus suscipit dapibus, elit nam consequat auctor convallis donec at sociosqu. Ullamcorper auctor turpis tristique curabitur hendrerit etiam, morbi in erat cras ridiculus gravida, elementum consectetur ex sagittis quis. Nec ad orci ante fringilla justo senectus vel venenatis odio, tristique quam leo donec ligula placerat molestie felis tellus sagittis, hendrerit in aliquam iaculis cursus dolor nisl elit. Justo placerat pellentesque mi suscipit nulla cras rutrum luctus leo magna, dolor arcu natoque faucibus orci suspendisse dis fames risus metus sapien, nisi nunc massa integer duis cubilia tellus volutpat dictumst. Inceptos lobortis pulvinar ligula fermentum nullam curabitur pellentesque, cubilia risus morbi montes ultrices neque, non adipiscing penatibus at rutrum elit. Ad massa luctus dolor lorem sodales tristique condimentum, elit senectus etiam ultricies feugiat fermentum placerat pellentesque, volutpat vivamus platea himenaeos ullamcorper fringilla. Etiam interdum ullamcorper fringilla dignissim pretium lorem elit metus cursus, nullam molestie at rhoncus tortor ligula ultricies sed, fames habitant ornare convallis tempor malesuada pulvinar mus.
+      </p>
+      <h1 class="spotstitle">
+         spots
+      </h1>
+      <div class="spot">
+         <h2 class=spottypetitle>
+            going out
+         </h2>
+         <div class="singlespot togethertop">
+            <div class=spottext>
+              <h3>Cap Hill</h3>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipiscinauctor curae, dictum sociosqu cras mus etiam et. Nostra potenti parturient magna tortor morbi tincidunt dolor blandit posuere senectus ullamcorper dui aenean ante cras, taciti gravida tempus augue accumsan malesuada ipsum mauris est sit montes convallis bibendum. Litora sociosqu porta maximus etiam dis nec turpis mus imperdiet, nisl convallis accumsan bibendum eleifend egestas lobortis lacus, pretium aliquet leo ultrices mollis tellus et odio. Nulla sapien duis ridiculus libero nisi accumsan bibendum, quis ultricies torquent dolor consectetur varius eleifend augue, tortor neque nullam faucibus lobortis tempor.
+               </p>
+            </div>
+            <div class=spotmap>
+               <p>
+                 asdfasdfasdfsadf sdf asd asd fasdfas4erq45 adfasd
+               </p>
+            </div>
+         </div>
+      </div>
+      <h1 class="guidetitle">
+         guide
+      </h1>
+      <h1 class="eatingtitle">
+         eating
+      </h1>
+      <h1 class="thingstodotitle">
+         things to do
+      </h1>
+   </div>
 </body>
 </html>
