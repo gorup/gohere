@@ -2,11 +2,13 @@
 <html>
   <head>
     <style>
+      body {
+        font-family: "Sans Serif"
+      }
       h1 {
         /* text-align: center; */
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-family: "Sans Serif"
         /* max-width: 512px; */
-        margin: auto;
       }
       .together {
         /* max-width: 500px; */
@@ -19,8 +21,11 @@
         /* max-width: 500px; */
         border: 0px dotted black;
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         align-items:flex-start;
+      }
+      a:visited{
+        color:blue;
       }
       .centered {
         margin: auto;
@@ -32,13 +37,16 @@
         margin-left: 50px;
         width: 300px;
       }
+      .thingstodoguide {
+        margin-bottom: 10px;
+      }
       #maintitle {
-        margin-bottom: 50px;
         margin-top: 20px;
         width: 400px;
       }
       .cityname {
         font-size: 40pt;
+        margin: 20px 0px;
       }
       #gohere {
         font-size:50pt;
@@ -51,9 +59,6 @@
       }
       h3 {
         margin: 4px 0px
-      }
-      #cityandsectionguide {
-        margin-bottom: 20px;
       }
       #nontitle {
         margin:auto;
@@ -89,6 +94,77 @@
       .spottypetitle {
         clear: both;
       }
+      tr {
+        margin: 40px;
+      }
+      table {
+        width: 1024px;
+        table-layout: fixed;
+        border-collapse: collapse;
+      }
+      .eatingtd {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 4px;
+        padding-top: 4px;
+        width: 10%;
+        padding-bottom: 4px;
+        word-wrap:break-word
+      }
+      .leftp {
+        float: left;
+        margin-left: 5px;
+      }
+      .thingstodoguide {
+        min-width: 30px;
+        max-width: 1024px;
+        justify-content: center;
+      }
+      #thingstodotable {
+        width: 1024px;
+        table-layout: fixed;
+      }
+      .thingstodorow {
+        vertical-align: baseline;
+      }
+      .rd {
+        width: 40%;
+      }
+      .thing {
+        border: 1px solid black;
+        margin-top: 9px;
+        border-radius: 0px;
+        padding: 5px;
+      }
+      .thingtitle {
+        font-weight: bold;
+      }
+      p {
+        margin: 0px;
+      }
+      ul {
+        padding-left: 20px;
+        margin-bottom: 0px;
+      }
+      .eatingtablerow {
+        vertical-align: baseline;
+        /* max-width: 1024px; */
+      }
+      .thinglink {
+        float:right;
+        margin: 0px 5px;
+      }
+      .leftthingcolumn {
+        margin-right: 6px;
+      }
+      .middlethingcolumn {
+        margin-right: 3px;
+        margin-left: 3px;
+      }
+      .rightthingcolumn {
+        margin-left: 6px;
+      }
     </style>
   </head>
 <body>
@@ -101,59 +177,186 @@
       <div class="together left" id="cityandsectionguide">
          <h1 class="cityname">Seattle</h1>
          <div class="together left sectionguide">
-            <p><a href="#spots">spots</a></p>
-            <p>|</p>
-            <p><a href="#guide">guide</a></p>
-            <p>|</p>
-            <p><a href="#eating">eating</a></p>
-            <p>|</p>
-            <p><a href="#thingstodo">things to do</a></p>
+            <a href="#spots">spots</a>
+            |
+            <a href="#guide">guide</a>
+            |
+            <a href="#eating">eating</a>
+            |
+            <a href="#thingstodo">things to do</a>
          </div>
       </div>
       <br>
       <p>
-         Lorem ipsum dolor sit amet consectetur adipiscing elit ullamcorper, libero vel arcu ad cras purus risus, mollis nisi fringilla vivamus mus mauris praesent. Enim quis eget blandit eros aptent fermentum ad, turpis libero diam magnis fames auctor curae, dictum sociosqu cras mus etiam et. Nostra potenti parturient magna tortor morbi tincidunt dolor blandit posuere senectus ullamcorper dui aenean ante cras, taciti gravida tempus augue accumsan malesuada ipsum mauris est sit montes convallis bibendum. Litora sociosqu porta maximus etiam dis nec turpis mus imperdiet, nisl convallis accumsan bibendum eleifend egestas lobortis lacus, pretium aliquet leo ultrices mollis tellus et odio. Nulla sapien duis ridiculus libero nisi accumsan bibendum, quis ultricies torquent dolor consectetur varius eleifend augue, tortor neque nullam faucibus lobortis tempor.
-      </p>
-      <p>
-         Vestibulum ligula lectus penatibus commodo dictum tempus molestie integer tincidunt, montes porta aptent libero pharetra vehicula ac faucibus suscipit dapibus, elit nam consequat auctor convallis donec at sociosqu. Ullamcorper auctor turpis tristique curabitur hendrerit etiam, morbi in erat cras ridiculus gravida, elementum consectetur ex sagittis quis. Nec ad orci ante fringilla justo senectus vel venenatis odio, tristique quam leo donec ligula placerat molestie felis tellus sagittis, hendrerit in aliquam iaculis cursus dolor nisl elit. Justo placerat pellentesque mi suscipit nulla cras rutrum luctus leo magna, dolor arcu natoque faucibus orci suspendisse dis fames risus metus sapien, nisi nunc massa integer duis cubilia tellus volutpat dictumst. Inceptos lobortis pulvinar ligula fermentum nullam curabitur pellentesque, cubilia risus morbi montes ultrices neque, non adipiscing penatibus at rutrum elit. Ad massa luctus dolor lorem sodales tristique condimentum, elit senectus etiam ultricies feugiat fermentum placerat pellentesque, volutpat vivamus platea himenaeos ullamcorper fringilla. Etiam interdum ullamcorper fringilla dignissim pretium lorem elit metus cursus, nullam molestie at rhoncus tortor ligula ultricies sed, fames habitant ornare convallis tempor malesuada pulvinar mus.
+        asdjflaj l;ksadj f;lksadjf ;lksajdf;l kasjd;lf kjsdal;k fjasl;kdj f;lks ja;lkj
       </p>
       <a id=spots>
-      <h1 class="spotstitle">
-         spots
-      </h1>
+        <h1 class="spotstitle">
+          spots
+        </h1>
       </a>
       <div class="spot">
          <h2 class=spottypetitle>
-            going out
+            Going Out
          </h2>
          <div class="singlespot togethertop">
             <div class=spottext>
               <h3>Cap Hill</h3>
                <p>
-                  Lorem ipsum dolor sit amet consectetur adipiscinauctor curae, dictum sociosqu cras mus etiam et. Nostra potenti parturient magna tortor morbi tincidunt dolor blandit posuere senectus ullamcorper dui aenean ante cras, taciti gravida tempus augue accumsan malesuada ipsum mauris est sit montes convallis bibendum. Litora sociosqu porta maximus etiam dis nec turpis mus imperdiet, nisl convallis accumsan bibendum eleifend egestas lobortis lacus, pretium aliquet leo ultrices mollis tellus et odio. Nulla sapien duis ridiculus libero nisi accumsan bibendum, quis ultricies torquent dolor consectetur varius eleifend augue, tortor neque nullam faucibus lobortis tempor.
-               </p>
+                ltos safsdk jas;lkf jas;lkdfj asl;kdjfoiasud fisadf09 8sadofjaskldfjl;kq3j l;kjl;kfajsd  ajsf
+              </p>
             </div>
             <div class=spotmap>
+               {{spot.map}}
+            </div>
+         </div>
+         <div class="singlespot togethertop">
+            <div class=spottext>
+              <h3>Fremont</h3>
                <p>
-                 asdfasdfasdfsadf sdf asd asd fasdfas4erq45 adfasd
-               </p>
+                ltos safsdk jas;lkf jas;lkdfj asl;kdjfoiasud fisadf09 8sadofjaskldfjl;kq3j l;kjl;kfajsd  ajsf
+              </p>
+            </div>
+            <div class=spotmap>
+               {{spot.map}}
+            </div>
+         </div>
+         <div class="singlespot togethertop">
+            <div class=spottext>
+              <h3>Belltown</h3>
+               <p>
+                ltos safsdk jas;lkf jas;lkdfj asl;kdjfoiasud fisadf09 8sadofjaskldfjl;kq3j l;kjl;kfajsd  ajsf
+              </p>
+            </div>
+            <div class=spotmap>
+               {{spot.map}}
             </div>
          </div>
       </div>
       <a id=guide>
-      <h1 class="guidetitle">
-         guide
-      </h1>
+        <h1 class="guidetitle">
+          guide
+        </h1>
       </a>
       <a id=eating>
-      <h1 class="eatingtitle">
-         eating
-      </h1>
+        <h1 class="eatingtitle">
+          eating
+        </h1>
+        <div>
+          <table id=eatingtable>
+            <tr class=eatingtablerow>
+              <div class="singlerec">
+                <td class=eatingtd>
+                  No Bones Beach Club
+                </td>
+                <td class=eatingtd>
+                  Vegan, Lunch, Dinner
+                </td>
+                <td class="eatingtd rd">
+                    So this is probably the best vegan place in seattle. large portions, tons of different options, not super extremely pricey, and an awesome chill vibe that you can dress down or up.
+                </td>
+                <td class=eatingtd>
+                  Ballard
+                </td>
+                <td class=eatingtd>
+                  {{restaurant.maplink}}
+                </td>
+              </div>
+            </tr>
+            <tr class=eatingtablerow>
+                <div class="singlerec">
+                  <td class=eatingtd>
+                    Cafe Vita
+                  </td>
+                  <td class=eatingtd>
+                    Coffee
+                  </td>
+                  <td class=eatingtd>
+                  Super hip & awesome vibe, in the heart of Cap Hilla dasdfasdfasd s a as asd asd asd asd
+                  </td>
+                  <td class=eatingtd>
+                    Cap Hill (Pike & 12ish)
+                  </td>
+                  <td class=eatingtd>
+                    <a href="https://google.com" target="_blank">google</a>
+                  </td>
+                </div>
+              </tr>
+          </table>
+        </div>
       </a>
       <a id=thingstodo>
-      <h1 class="thingstodotitle">
-         things to do
-      </h1>
+        <h1 class="thingstodotitle">
+          things to do
+        </h1>
+          <div class="together left thingstodoguide"><p>
+              <a href="#spots">spots</a>
+              |
+              <a href="#guide">guide</a>
+              |
+              <a href="#eating">eating</a>
+              |
+              <a href="#thingstodo">things to do</a></p>
+          </div>
+         <div>
+           <table id=thingstodotable>
+             <tr class=thingstodotablerow>
+               <td class=thingstodorow>
+                 <div class="thing leftthingcolumn">
+                   <p class=thingtitle>{{thing.title}}</p>
+                  asdasdf asdflkjas;lkfj laskjdfal; kjasl;kd fjl;askj f;laskj df;laksdj f;laskjd fl;askj df ;laskj f ;lkasjdf;lkasj df;lk jsad;lfk jas;ldkf jasldf
+                  <ul>
+                    <li>
+                      {{thing.link1.text}} asdf asdf asdf asdf fasdf asd fasd fasd fadf asdf
+                      <div class=thinglink>
+                        {{link}}
+                      </div>
+                    </li>
+                    <li>
+                      asdf
+                    </li>
+                  </ul>
+                </div>
+                 <div class="thing leftthingcolumn">
+                  asdasdf asd jasldf
+                 </div>
+               </td>
+               <!-- <td class=thingstodorow>
+                <div class="thing middlethingcolumn">
+                  asdasdf
+                </div>
+                <div class="thing middlethingcolumn">
+                    <p class=thingtitle>Hiking</p>
+                    <p style="text-indent: 20px">Hiking in WA is simply amazing. Trails of all difficulties can be found less than an hour away, and you can travel as far as you'd like to get some more unique views. </p>
+                    <p style="text-indent: 20px">Alpine lakes, scenic mountain views, beautiful forests all await you.</p>
+                    <ul>
+                     <li>
+                       Washington Trails Association - Best site for all hiking in WA
+                       <div class=thinglink>
+                         <a href="https://www.wta.org/" target="_blank">wta.org</a>
+                       </div>
+                     </li>
+                   </ul>
+                 </div>
+               </td> -->
+               <td class="thingstodorow">
+                  <div class="thing rightthingcolumn">
+                      <p class=thingtitle>Hiking</p>
+                      <p style="text-indent: 20px">Hiking in WA is simply amazing. Trails of all difficulties can be found less than an hour away, and you can travel as far as you'd like to get some more unique views. </p>
+                      <p style="text-indent: 20px">Alpine lakes, scenic mountain views, beautiful forests all await you.</p>
+                      <ul>
+                       <li>
+                         Washington Trails Association - Best site for all hiking in WA
+                         <div class=thinglink>
+                           <a href="https://www.wta.org/" target="_blank">wta.org</a>
+                         </div>
+                       </li>
+                     </ul>
+                   </div>
+              </td >
+             </tr>
+           </table>
+         </div>
       </a>
    </div>
 </body>
