@@ -13,7 +13,7 @@ edition = "2018"
 # runtime = "0.3.0-alpha.6"
 # futures-preview = "0.3.0-alpha.17"
 # rustls = "0.15.2"
-rocket = "0.4.2"
+rocket = { version = "0.4.2", features = ["tls"] }
 serde = { version = "1.0", features = ["derive"] }
 
 [dependencies.rocket_contrib]
