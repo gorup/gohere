@@ -1,0 +1,27 @@
+#!/bin/bash
+set -e
+
+if [[ $UID != 0 ]]; then
+        echo "Please run this script with sudo:"
+        echo "sudo $0 $*"
+        exit 1
+fi
+
+if [ -f gohere.pid ]
+then
+        kill $(cat gohere.pid)
+fi
+
+gsutil cp gs://socket-resources/gohere.zip .
+
+unzip -o gohere.zip
+
+./gohere &>> gohere.log &
+
+pid=$!
+
+echo $pid > gohere.pid
+
+disown $pid
+
+echo "Done, disowned process of pid $pid!"
