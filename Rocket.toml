@@ -1,3 +1,4 @@
+[development]
 [production]
 port = 443
 tls = { certs = "/etc/letsencrypt/live/gohere.city/fullchain.pem", key = "/etc/letsencrypt/live/gohere.city/privkey.pem" }

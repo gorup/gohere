@@ -1,6 +1,11 @@
+#!/bin/bash
+
+set -e
+
 cargo build --release
 zip -j gohere.zip target/release/gohere
 zip -r gohere.zip templates/
 zip gohere.zip Rocket.toml
+zip gohere.zip build
 
 gsutil cp gohere.zip gs://socket-resources/gohere.zip

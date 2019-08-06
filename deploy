@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+gsutil cp gs://socket-resources/gohere.zip .
+
+unzip -o gohere.zip
+
 if [[ $UID != 0 ]]; then
         echo "Please run this script with sudo:"
         echo "sudo $0 $*"
@@ -11,10 +15,6 @@ if [ -f gohere.pid ]
 then
         kill $(cat gohere.pid)
 fi
-
-gsutil cp gs://socket-resources/gohere.zip .
-
-unzip -o gohere.zip
 
 ./gohere &>> gohere.log &
 
