@@ -1,0 +1,163 @@
+body {
+    font-family: "Sans Serif"
+  }
+  h1 {
+    /* text-align: center; */
+    font-family: "Sans Serif"
+    /* max-width: 512px; */
+  }
+  .together {
+    /* max-width: 500px; */
+    border: 0px dotted black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .togethertop {
+    /* max-width: 500px; */
+    border: 0px dotted black;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items:flex-start;
+  }
+  a:visited{
+    color:blue;
+  }
+  .centered {
+    margin: auto;
+  }
+  .left {
+    float: left;
+  }
+  .sectionguide {
+    margin-left: 50px;
+    width: 300px;
+  }
+  .thingstodoguide {
+    margin-bottom: 10px;
+  }
+  #maintitle {
+    margin-top: 20px;
+    width: 400px;
+  }
+  .cityname {
+    font-size: 40pt;
+    margin: 20px 0px;
+  }
+  #gohere {
+    font-size:50pt;
+  }
+  br {
+    clear: both
+  }
+  h2 {
+    margin: 4px 0px
+  }
+  h3 {
+    margin: 4px 0px
+  }
+  #nontitle {
+    margin:auto;
+    width: 1024px;
+    border: 0px solid black;
+    height: 5000px;
+  }
+  .spot {
+    width: 1024px;
+    border: 0px solid #008000;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    clear: both;
+    margin-left:10px;
+  }
+  .spottext {
+    border: 0px double red;
+    width: 480px;
+    margin-right: 64px;
+    /* float:left; */
+  }
+  .spotmap {
+    border: 0px double blue;
+    width: 480px;
+    /* float: left; */
+  }
+  .singlespot {
+    margin-left: 10px;
+  }
+  h1 {
+    clear: both;
+  }
+  .spottypetitle {
+    clear: both;
+  }
+  tr {
+    margin: 40px;
+  }
+  table {
+    width: 1024px;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+  .eatingtd {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 4px;
+    padding-top: 4px;
+    width: 10%;
+    padding-bottom: 4px;
+    word-wrap:break-word
+  }
+  .leftp {
+    float: left;
+    margin-left: 5px;
+  }
+  .thingstodoguide {
+    min-width: 30px;
+    max-width: 1024px;
+    justify-content: center;
+  }
+  #thingstodotable {
+    width: 1024px;
+    table-layout: fixed;
+  }
+  .thingstodorow {
+    vertical-align: baseline;
+  }
+  .rd {
+    width: 40%;
+  }
+  .thing {
+    border: 1px solid black;
+    margin-top: 9px;
+    border-radius: 0px;
+    padding: 5px;
+  }
+  .thingtitle {
+    font-weight: bold;
+  }
+  p {
+    margin: 0px;
+  }
+  ul {
+    padding-left: 20px;
+    margin-bottom: 0px;
+  }
+  .eatingtablerow {
+    vertical-align: baseline;
+    /* max-width: 1024px; */
+  }
+  .thinglink {
+    float:right;
+    margin: 0px 5px;
+  }
+  .leftthingcolumn {
+    margin-right: 6px;
+  }
+  .middlethingcolumn {
+    margin-right: 3px;
+    margin-left: 3px;
+  }
+  .rightthingcolumn {
+    margin-left: 6px;
+  }

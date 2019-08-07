@@ -4,6 +4,7 @@
 use std::collections::HashMap;
 use serde::{Serialize, Deserialize};
 use rocket::State;
+use rocket_contrib::serve::StaticFiles;
 use rocket_contrib::templates::{Template, Engines};
 
 struct GlobalState {
@@ -27,20 +28,15 @@ struct CityData {
 fn city(city: String, state: State<GlobalState>) -> Option<Template> {
     let lower = city.to_lowercase();
     if let Some(citydata) =  state.cities.get(&lower.as_str()) {
-        Some(Template::render("index", &citydata))
+        Some(Template::render("city", &citydata))
     } else {
         None
     }
 }
 
-#[get("/about")]
-fn about() -> &'static str {
-    "About"
-}
-
 #[get("/")]
-fn index() -> &'static str {
-    "Hello, world!"
+fn index() -> Template {
+    Template::render("index", ())
 }
 
 fn main() {
@@ -54,6 +50,7 @@ fn main() {
     rocket::ignite()
         .attach(template_fairing)
         .manage(GlobalState::new(map))
-        .mount("/", routes![index, about, city])
+        .mount("/resources", StaticFiles::from("resources"))
+        .mount("/", routes![index, city])
         .launch();
 }

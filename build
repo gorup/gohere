@@ -5,6 +5,7 @@ set -e
 cargo build --release
 zip -j gohere.zip target/release/gohere
 zip -r gohere.zip templates/
+zip -r gohere.zip resources/
 zip gohere.zip Rocket.toml
 zip gohere.zip build
 
