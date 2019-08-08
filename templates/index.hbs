@@ -3,10 +3,16 @@
   <head>
     {{> favicon_info }}
     {{> css }}
+    <style>
+      #mainlogo {
+        max-width: 512px;
+        margin-top: 20px;
+      }
+    </style>
     <title>asdf</title>
   </head>
 <body>
-   <div class="centered" style="max-width: 512px">
+   <div class="centered" id="mainlogo">
       {{> logo }}
    </div>
 </body>

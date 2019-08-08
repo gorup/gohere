@@ -3,13 +3,44 @@
   <head>
     {{> favicon_info }}
     {{> css }}
+    <style>
+      #mainlogo {
+        min-width: 180px;
+        flex: 0 1 0;
+      }
+      .maintitlesides {
+        flex: 33% 1 0;
+      }
+      .maintitleleft {
+        float: right;
+        margin-right: 30px;
+      }
+      .maintitleright {
+        margin-left: 30px;
+      }
+      #maintitletop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        flex-basis: 33%;
+      }
+    </style>
     <title>asdf</title>
   </head>
 <body>
-   <div class="centered" style="max-width: 512px">
-      {{> logo }}
-   </div>
-   <div id=nontitle>
+  <div id="maintitletop">
+    <div class="maintitlesides">
+      <a href="#" class="maintitleleft">cities </a>
+    </div>
+    <div id="mainlogo" class="guide">
+        {{> logo }}
+    </div>
+    <div class="maintitleright maintitlesides">
+      <a href="#">about</a>
+    </div>
+  </div>
+  <div id=nontitle>
       <div class="together left" id="cityandsectionguide">
          <h1 class="cityname">Seattle</h1>
          <div class="together left sectionguide">
