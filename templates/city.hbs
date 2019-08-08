@@ -4,45 +4,20 @@
     {{> favicon_info }}
     {{> css }}
     <style>
-      #mainlogo {
-        min-width: 180px;
-        flex: 0 1 0;
+      .spottext {
+        width: 500px;
       }
-      .maintitlesides {
-        flex: 33% 1 0;
-      }
-      .maintitleleft {
-        float: right;
-        margin-right: 30px;
-      }
-      .maintitleright {
-        margin-left: 30px;
-      }
-      #maintitletop {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-        flex-basis: 33%;
+      .spottextandmap {
+        justify-content: space-between;
       }
     </style>
-    <title>asdf</title>
+    <title>go here - {{cityname}}</title>
   </head>
 <body>
-  <div id="maintitletop">
-    <div class="maintitlesides">
-      <a href="#" class="maintitleleft">cities </a>
-    </div>
-    <div id="mainlogo" class="guide">
-        {{> logo }}
-    </div>
-    <div class="maintitleright maintitlesides">
-      <a href="#">about</a>
-    </div>
-  </div>
+  {{> subpage_header}}
   <div id=nontitle>
       <div class="together left" id="cityandsectionguide">
-         <h1 class="cityname">Seattle</h1>
+         <h1 class="cityname">{{cityname}}</h1>
          <div class="together left sectionguide">
             <a href="#spots">spots</a>
             |
@@ -55,51 +30,36 @@
       </div>
       <br>
       <p>
-        asdjflaj l;ksadj f;lksadjf ;lksajdf;l kasjd;lf kjsdal;k fjasl;kdj f;lks ja;lkj
+        {{intro}}
       </p>
       <a id=spots>
         <h1 class="spotstitle">
           spots
         </h1>
       </a>
+      {{#each spotcats }}
       <div class="spot">
          <h2 class=spottypetitle>
-            Going Out
+            {{ this.title}}
          </h2>
-         <div class="singlespot togethertop">
-            <div class=spottext>
-              <h3>Cap Hill</h3>
-               <p>
-                ltos safsdk jas;lkf jas;lkdfj asl;kdjfoiasud fisadf09 8sadofjaskldfjl;kq3j l;kjl;kfajsd  ajsf
-              </p>
-            </div>
-            <div class=spotmap>
-               {{spot.map}}
-            </div>
-         </div>
-         <div class="singlespot togethertop">
-            <div class=spottext>
-              <h3>Fremont</h3>
-               <p>
-                {{num}}
-              </p>
-            </div>
-            <div class=spotmap>
-               {{spot.map}}
+         {{ this.description }}
+         {{#each this.spots}}
+         <div class="singlespot">
+            <h3>{{ this.name }}</h3>
+            <div class="togethertop spottextandmap">
+              <div class="spottext">
+               {{#each this.text }}
+                <p style="text-indent: 20pt">{{this}}</p>
+               {{/each}}
+              </div>
+              <div class="togethertop spotmapholder">
+                <img src="/resources/images/map.png" class="spotmap">
+              </div>
             </div>
          </div>
-         <div class="singlespot togethertop">
-            <div class=spottext>
-              <h3>Belltown</h3>
-               <p>
-                ltos safsdk jas;lkf jas;lkdfj asl;kdjfoiasud fisadf09 8sadofjaskldfjl;kq3j l;kjl;kfajsd  ajsf
-              </p>
-            </div>
-            <div class=spotmap>
-               {{spot.map}}
-            </div>
-         </div>
+        {{/each }}
       </div>
+      {{/each }}
       <a id=guide>
         <h1 class="guidetitle">
           guide
@@ -111,44 +71,29 @@
         </h1>
         <div>
           <table id=eatingtable>
-            <tr class=eatingtablerow>
-              <div class="singlerec">
-                <td class=eatingtd>
-                  No Bones Beach Club
-                </td>
-                <td class=eatingtd>
-                  Vegan, Lunch, Dinner
-                </td>
-                <td class="eatingtd rd">
-                    So this is probably the best vegan place in seattle. large portions, tons of different options, not super extremely pricey, and an awesome chill vibe that you can dress down or up.
-                </td>
-                <td class=eatingtd>
-                  Ballard
-                </td>
-                <td class=eatingtd>
-                  {{restaurant.maplink}}
-                </td>
-              </div>
-            </tr>
+            {{#each eating }}
             <tr class=eatingtablerow>
                 <div class="singlerec">
                   <td class=eatingtd>
-                    Cafe Vita
+                    {{this.name}}
                   </td>
                   <td class=eatingtd>
-                    Coffee
+                    {{this.category}}
+                  </td>
+                  <td class="eatingtd rd">
+                    {{this.description}}
                   </td>
                   <td class=eatingtd>
-                  Super hip & awesome vibe, in the heart of Cap Hilla dasdfasdfasd s a as asd asd asd asd
+                    {{this.area}}
                   </td>
                   <td class=eatingtd>
-                    Cap Hill (Pike & 12ish)
-                  </td>
-                  <td class=eatingtd>
-                    <a href="https://google.com" target="_blank">google</a>
+                    {{#each this.urls }}
+                      <a href="{{this.url}}" target="_blank">{{this.show}}</a>
+                    {{/each}}
                   </td>
                 </div>
-              </tr>
+            </tr>
+            {{/each}}
           </table>
         </div>
       </a>
@@ -156,73 +101,34 @@
         <h1 class="thingstodotitle">
           things to do
         </h1>
-          <div class="together left thingstodoguide"><p>
-              <a href="#spots">spots</a>
-              |
-              <a href="#guide">guide</a>
-              |
-              <a href="#eating">eating</a>
-              |
-              <a href="#thingstodo">things to do</a></p>
+          <div class="together thingstodoguide"><p>
+            {{#each things}}
+              <a href="#{{this.title}}">{{this.title}}</a>
+            {{/each}}
           </div>
-         <div>
-           <table id=thingstodotable>
-             <tr class=thingstodotablerow>
-               <td class=thingstodorow>
-                 <div class="thing leftthingcolumn">
-                   <p class=thingtitle>{{thing.title}}</p>
-                  asdasdf asdflkjas;lkfj laskjdfal; kjasl;kd fjl;askj f;laskj df;laksdj f;laskjd fl;askj df ;laskj f ;lkasjdf;lkasj df;lk jsad;lfk jas;ldkf jasldf
-                  <ul>
-                    <li>
-                      {{thing.link1.text}} asdf asdf asdf asdf fasdf asd fasd fasd fadf asdf
-                      <div class=thinglink>
-                        {{link}}
+         <div id="thingsbox">
+           {{#each things}}
+              <div class="thing">
+                <p class=thingtitle><a id="{{this.title}}">{{this.title}}</a></p>
+                {{#each this.paragraphs}}
+                  <p style="text-indent: 20px">{{this}}</p>
+                {{/each}}
+                <ul>
+                  {{#each this.nicelinks}}
+                  <li>
+                    <div style="display: flex;">
+                      <div>
+                        {{this.description}}
                       </div>
-                    </li>
-                    <li>
-                      asdf
-                    </li>
-                  </ul>
-                </div>
-                 <div class="thing leftthingcolumn">
-                  asdasdf asd jasldf
-                 </div>
-               </td>
-               <!-- <td class=thingstodorow>
-                <div class="thing middlethingcolumn">
-                  asdasdf
-                </div>
-                <div class="thing middlethingcolumn">
-                    <p class=thingtitle>Hiking</p>
-                    <p style="text-indent: 20px">Hiking in WA is simply amazing. Trails of all difficulties can be found less than an hour away, and you can travel as far as you'd like to get some more unique views. </p>
-                    <p style="text-indent: 20px">Alpine lakes, scenic mountain views, beautiful forests all await you.</p>
-                    <ul>
-                     <li>
-                       Washington Trails Association - Best site for all hiking in WA
-                       <div class=thinglink>
-                         <a href="https://www.wta.org/" target="_blank">wta.org</a>
-                       </div>
-                     </li>
-                   </ul>
-                 </div>
-               </td> -->
-               <td class="thingstodorow">
-                  <div class="thing rightthingcolumn">
-                      <p class=thingtitle>Hiking</p>
-                      <p style="text-indent: 20px">Hiking in WA is simply amazing. Trails of all difficulties can be found less than an hour away, and you can travel as far as you'd like to get some more unique views. </p>
-                      <p style="text-indent: 20px">Alpine lakes, scenic mountain views, beautiful forests all await you.</p>
-                      <ul>
-                       <li>
-                         Washington Trails Association - Best site for all hiking in WA
-                         <div class=thinglink>
-                           <a href="https://www.wta.org/" target="_blank">wta.org</a>
-                         </div>
-                       </li>
-                     </ul>
-                   </div>
-              </td >
-             </tr>
-           </table>
+                      <div class=thinglink>
+                        <a href="{{this.link.url}}" target="_blank">{{this.link.show}}</a>
+                      </div>
+                    </div>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+           {{/each}}
          </div>
       </a>
    </div>
